@@ -20,7 +20,7 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(
 .brand p{margin:2px 0 0 0;color:var(--muted);font-size:0.9rem}
 .nav{display:flex;gap:8px;align-items:center}
 .btn{display:inline-block;padding:9px 14px;border-radius:10px;text-decoration:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
-.btn.alt{background:transparent;color:var(--accent);border:1px solid rgba(15,23,42,0.06)}
+.btn.alt{background:rgba(207, 207, 207, 0.479);color:var(--accent);border:1px solid rgb(0, 0, 0); cursor:pointer}
 .container{margin-top:18px}
 .grid{display:grid;grid-template-columns:1fr 340px;gap:28px}
 .card{background:var(--card);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
@@ -104,9 +104,9 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(
           </div>
 
           <section class="gallery">
-            <div class="tile"><div class="img-wrap"><img src="static/robotica.jpg" alt="Robótica"></div><div class="caption"><h4>Robótica</h4><p>Humanoides e industriais.</p></div></div>
-            <div class="tile"><div class="img-wrap"><img src="static/semiconductor.jpg" alt="Semicondutores"></div><div class="caption"><h4>Semicondutores</h4><p>Sensores e chips.</p></div></div>
-            <div class="tile"><div class="img-wrap"><img src="static/startup.jpg" alt="Startups"></div><div class="caption"><h4>Startups</h4><p>Ecossistema de inovação.</p></div></div>
+            <div class="tile"><div class="img-wrap"><img src="static/Robo.jpg" alt="Robótica"></div><div class="caption"><h4>Robótica</h4><p>Humanoides e industriais.</p></div></div>
+            <div class="tile"><div class="img-wrap"><img src="static/Semi.jpg" alt="Semicondutores"></div><div class="caption"><h4>Semicondutores</h4><p>Sensores e chips.</p></div></div>
+            <div class="tile"><div class="img-wrap"><img src="static/Startup.jpg" alt="Startups"></div><div class="caption"><h4>Startups</h4><p>Ecossistema de inovação.</p></div></div>
             <div class="tile"><div class="img-wrap"><img src="static/ia.jpg" alt="IA"></div><div class="caption"><h4>IA</h4><p>Pesquisa aplicada e soluções.</p></div></div>
           </section>
         </main>
@@ -140,7 +140,6 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(
               <h2 style="margin:0">Eventos Tech</h2>
               <div>
                 <button id="backToTech" class="btn alt">← Voltar à Tecnologia</button>
-                <button id="goHome" class="btn" style="margin-left:8px">Início</button>
               </div>
             </div>
 
@@ -200,11 +199,11 @@ body{margin:0;font-family:Inter,system-ui,sans-serif;background:linear-gradient(
 <script>
 
 const EVENTS = [
-  { id:1, title:'TOKYO AI Conference', type:'conferencia', city:'tokyo', date:'2026-03-12', img:'static/ia-event.jpg', tags:['IA','Pesquisa'], desc:'Conferência internacional sobre aplicações práticas de IA.' },
-  { id:2, title:'Osaka Robotics Expo', type:'conferencia', city:'osaka', date:'2026-04-05', img:'static/robotica-event.jpg', tags:['Robótica'], desc:'Soluções industriais e humanoides em exposição.' },
-  { id:3, title:'Kyoto Hackathon – GreenTech', type:'hackathon', city:'kyoto', date:'2026-02-20', img:'static/hackathon.jpg', tags:['Sustentabilidade','Hackathon'], desc:'48h para criar soluções sustentáveis.' },
-  { id:4, title:'Tokyo Developer Meetup', type:'meetup', city:'tokyo', date:'2026-01-30', img:'static/meetup.jpg', tags:['Dev','Networking'], desc:'Encontro mensal de desenvolvedores e startups.' },
-  { id:5, title:'AI Workshop — Hands-on', type:'workshop', city:'osaka', date:'2026-05-18', img:'static/workshop.jpg', tags:['IA','Hands-on'], desc:'Workshop prático de modelos e implantação.' }
+  { id:1, title:'TOKYO AI Conference', type:'conferencia', city:'tokyo', date:'2026-03-12', img:'static/tokyoai.jpg', tags:['IA','Pesquisa'], desc:'Conferência internacional sobre aplicações práticas de IA.' },
+  { id:2, title:'Osaka Robotics Expo', type:'conferencia', city:'osaka', date:'2026-04-05', img:'static/roboticai.jpg', tags:['Robótica'], desc:'Soluções industriais e humanoides em exposição.' },
+  { id:3, title:'Kyoto Hackathon – GreenTech', type:'hackathon', city:'kyoto', date:'2026-02-20', img:'static/greenai.jpg', tags:['Sustentabilidade','Hackathon'], desc:'48h para criar soluções sustentáveis.' },
+  { id:4, title:'Tokyo Developer Meetup', type:'meetup', city:'tokyo', date:'2026-01-30', img:'static/developerai.jpg', tags:['Dev','Networking'], desc:'Encontro mensal de desenvolvedores e startups.' },
+  { id:5, title:'AI Workshop — Hands-on', type:'workshop', city:'osaka', date:'2026-05-18', img:'static/iawork.jpg', tags:['IA','Hands-on'], desc:'Workshop prático de modelos e implantação.' }
 ];
 
 const sectTec = document.getElementById('sect-tecnologia');
