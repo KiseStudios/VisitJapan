@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cultura Japonesa — Visite o Japão</title>
+<style>
+    
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --text:#0f172a;
+  --accent:#1e40af;
+  --accent-2:#ef4444;
+  --glass: rgba(255,255,255,0.7);
+  --shadow: 0 10px 30px rgba(15,23,42,0.06);
+  --radius-lg:18px;
+  --radius-sm:10px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, sans-serif;
+  background:linear-gradient(180deg,#eef2ff 0%, var(--bg) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1200px;margin:36px auto;padding:20px}
+.header{text-align:center;padding:38px 18px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));border-radius:20px;box-shadow:var(--shadow)}
+.header h1{margin:0 0 6px 0;font-size:32px;letter-spacing:-0.02em}
+.header p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px}
+.card{background:var(--card);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow)}
+.card h2{margin-top:0}
+.lead{color:var(--muted)}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:16px}
+.info-item{background:linear-gradient(180deg, rgba(30,64,175,0.04), rgba(255,255,255,0.6));padding:16px;border-radius:12px}
+.info-item h3{margin:0 0 8px 0}
+.info-item p{margin:0;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:18px}
+.gallery .tile{position:relative;overflow:visible;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.85));box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+.img-wrap{height:160px;overflow:visible;position:relative}
+.img-wrap img{width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform .45s cubic-bezier(.2,.9,.2,1),box-shadow .3s}
+.tile:hover{z-index:50}
+tile:hover img{transform:scale(1.18);box-shadow:0 30px 60px rgba(2,6,23,0.18)}
+.caption{padding:12px}
+.caption h4{margin:0 0 6px 0}
+.caption p{margin:0;color:var(--muted);font-size:0.95rem}
+.sidebar .card{padding:18px}
+.place-list{list-style:none;padding:0;margin:0}
+.place-list li{padding:10px 0;border-bottom:1px dashed rgba(15,23,42,0.04)}
+.place-list li strong{display:block}
+.footer{text-align:center;margin-top:26px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;background:var(--accent);color:#fff;font-weight:600;transition:.18s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,64,175,0.12)}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}.info-grid{grid-template-columns:1fr}.img-wrap{height:140px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1>Cultura Japonesa</h1>
+    <p>Tradições, história, comida, arte e muito mais.</p>
+    <a href="/" class="btn">Voltar</a>
+  </header>
+
+  <div class="grid">
+    <main>
+      <div class="card">
+        <h2>Sobre a Cultura Japonesa</h2>
+        <p class="lead">Explore os pilares que moldam o Japão: história, tradições, culinária, arte e filosofia.</p>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>História</h3>
+            <p>Períodos imperiais, shogunatos, samurais e a modernização da era Meiji.</p>
+          </div>
+          <div class="info-item">
+            <h3>Tradições</h3>
+            <p>Cerimônia do chá, festivais matsuri, artes marciais e respeito ancestral.</p>
+          </div>
+          <div class="info-item">
+            <h3>Culinária</h3>
+            <p>Sushi, ramen, tempurá, udon e a filosofia do equilíbrio visual e sabor.</p>
+          </div>
+          <div class="info-item">
+            <h3>Arte & Estética</h3>
+            <p>Wabi-sabi, minimalismo, ikebana, caligrafia e arquitetura tradicional.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="gallery">
+        <div class="tile">
+          <div class="img-wrap"><img src="static/Tradiçao.jpg"></div>
+          <div class="caption"><h4>Tradições</h4><p>Costumes e rituais ancestrais.</p></div>
+        </div>
+        <div class="tile">
+          <div class="img-wrap"><img src="static/templo.jpg"></div>
+          <div class="caption"><h4>Templos</h4><p>Espiritualidade e tradição.</p></div>
+        </div>
+        <div class="tile">
+          <div class="img-wrap"><img src="static/Culinaria.jpg"></div>
+          <div class="caption"><h4>Culinária</h4><p>Sabores icônicos.</p></div>
+        </div>
+        <div class="tile">
+          <div class="img-wrap"><img src="static/Matsuri.jpg"></div>
+          <div class="caption"><h4>Matsuri</h4><p>Festivais culturais.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Pontos Culturais</h3>
+        <ul class="place-list">
+          <li><strong>Kyoto</strong> Berço das tradições.</li>
+          <li><strong>Nara</strong> História e templos antigos.</li>
+          <li><strong>Osaka</strong> Cultura urbana e culinária.</li>
+          <li><strong>Tóquio</strong> Tradição + modernidade.</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer class="footer">© 2025 — Kise Studios</footer>
+</div>
+</body>
+</html>
