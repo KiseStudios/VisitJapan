@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descubra — Sobre</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+     <span class="logo">Visit Japan</span>
+    <nav class="main-nav" aria-label="Menu principal">
+      <a href="/" class="nav-link">Início</a> <!-- Link para a página inicial -->
+      <a href="#cultura" class="nav-link">Cultura</a>
+      <a href="/tecnologia" class="nav-link">Tecnologia</a>
+      <a href="/contatos" class="nav-link">Contatos</a>
+      <a href="/sobre" class="nav-link">Sobre</a> <!-- Link para a página sobre -->
+      <a href="/galeria" class="nav-link">Galeria</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+  <main>
+ <section id="sobre" class="sobre">
+  <div class="container">
+    <h1>Sobre o Visit Japan</h1>
+    <p>O Visit Japan é um blog criado com o objetivo de compartilhar informações sobre a cultura, história e turismo do Japão. A proposta do site é fornecer ao público um conteúdo educativo e envolvente, explorando as diferentes eras históricas do Japão, seus períodos culturais e os marcos que formaram o país tal como é hoje.</p>
+    
+    <p>A missão do blog é apresentar um conteúdo acessível e informativo sobre as principais eras do Japão, com ênfase nas transformações culturais, políticas e sociais que ocorreram ao longo dos séculos. O blog visa ser uma referência para estudantes, turistas e entusiastas da cultura japonesa, oferecendo não só uma visão histórica, mas também dicas de viagem e curiosidades sobre o Japão.</p>
+    
+  </div>
+</section>
+
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Descubra — Kise Studios. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

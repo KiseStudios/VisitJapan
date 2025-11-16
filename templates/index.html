@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descubra — Turismo & Cultura</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>  
+  <header class="site-header">
+    <div class="container">
+     <span class="logo">Visit Japan</span>
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#cultura" class="nav-link">Cultura</a>
+        <a href="/tecnologia" class="nav-link">Tecnologia</a>
+        <a href="/contatos" class="nav-link">Contatos</a>
+        <a href="/sobre" class="nav-link">Sobre</a> <!-- Link para a página Sobre -->
+        <a href="/galeria" class="nav-link">Galeria</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Primeira Página - Hero -->
+    <section id="inicio" class="hero" style="background-image: url('static/Fundo.jpg'); background-size: cover; background-position: center;">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Visit Japan</h1>
+          <p>Cultura, Riqueza, tradições.</p>
+          <a href="/galeria" class="btn">Galeria</a>
+          <a href="/sobre" class="btn btn-secondary">Sobre o Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segunda Página - Linha do Tempo Interativa -->
+    <section id="timeline" class="timeline">
+       <h2>Eras do Japão</h2>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era1.png" alt="Período Asuka" class="timeline-image">
+            <p class="timeline-title">Período Asuka (538–710)</p>
+            <p class="timeline-description">Descrição: O Período Asuka é marcado pela introdução do budismo e pelo desenvolvimento da cultura e arquitetura japonesa.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era2.jpg" alt="Período Nara" class="timeline-image">
+            <p class="timeline-title">Período Nara (710–794)</p>
+            <p class="timeline-description">Descrição: A primeira capital permanente do Japão foi estabelecida em Nara, e o budismo se tornou a religião predominante.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era3.jpg" alt="Período Heian" class="timeline-image">
+            <p class="timeline-title">Período Heian (794–1185)</p>
+            <p class="timeline-description">Descrição: A corte imperial se estabeleceu em Kyoto e a cultura japonesa floresceu com a arte, a literatura e o budismo.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era4.jpg" alt="Período Kamakura" class="timeline-image">
+            <p class="timeline-title">Período Kamakura (1185–1333)</p>
+            <p class="timeline-description">Descrição: O primeiro governo militar japonês, o shogunato Kamakura, foi estabelecido, com forte influência de samurais.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era5.jpg" alt="Período Muromachi" class="timeline-image">
+            <p class="timeline-title">Período Muromachi (1336–1573)</p>
+            <p class="timeline-description">Descrição: O período é conhecido por sua arte refinada e o aumento da influência dos shoguns, bem como as disputas militares entre os clãs.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era6.jpg" alt="Período Azuchi-Momoyama" class="timeline-image">
+            <p class="timeline-title">Período Azuchi-Momoyama (1573–1603)</p>
+            <p class="timeline-description">Descrição: Caracterizado pela unificação do Japão sob Oda Nobunaga e Toyotomi Hideyoshi, com grande desenvolvimento na cultura e arquitetura.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era7.jpg" alt="Período Edo" class="timeline-image">
+            <p class="timeline-title">Período Edo (1603–1868)</p>
+            <p class="timeline-description">Descrição: Uma época de paz e prosperidade, mas também de isolamento nacional e de forte controle dos shoguns sobre o Japão.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <img src="static/Era8.png" alt="Período Meiji" class="timeline-image">
+            <p class="timeline-title">Período Meiji (1868–1912)</p>
+            <p class="timeline-description">Descrição: O Japão se modernizou rapidamente, abrindo suas portas para o Ocidente e estabelecendo um império industrializado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Descubra — Kise Studios. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Função para revelar os flashcards conforme o usuário rola a página
+    document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll('.timeline-item');
+    
+        function checkVisibility() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top + window.scrollY;
+                if (scrollPosition > itemTop + 150) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Chama a função ao carregar a página
+    });
+  </script>
+</body>
+</html>
